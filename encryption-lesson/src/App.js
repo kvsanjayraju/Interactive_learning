@@ -8,6 +8,7 @@ import AsymmetricPadlockSimulation from './components/AsymmetricPadlockSimulatio
 import HybridHandshakeSimulation from './components/HybridHandshakeSimulation';
 import RealWorldExamples from './components/RealWorldExamples';
 import SshGithubLesson from './components/SshGithubLesson';
+import BrilliantLesson from './components/BrilliantLesson';
 
 function App() {
   return (
@@ -15,6 +16,13 @@ function App() {
       <LessonPage>
         {/* Each StepCard below corresponds to a step in the lesson. */}
         {/* You can change the title and explanation for each step here. */}
+
+        <StepCard
+          title="Encryption Concepts"
+          explanation="A high-level overview of symmetric and asymmetric encryption."
+        >
+          <BrilliantLesson />
+        </StepCard>
 
         <StepCard
           title="Why we need encryption"
