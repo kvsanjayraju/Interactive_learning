@@ -7,6 +7,7 @@ import SymmetricBoxSimulation from './components/SymmetricBoxSimulation';
 import AsymmetricPadlockSimulation from './components/AsymmetricPadlockSimulation';
 import HybridHandshakeSimulation from './components/HybridHandshakeSimulation';
 import RealWorldExamples from './components/RealWorldExamples';
+import SshGithubLesson from './components/SshGithubLesson';
 
 function App() {
   return (
@@ -54,6 +55,13 @@ function App() {
           explanation="Placeholder text for real-world examples."
         >
           <RealWorldExamples />
+        </StepCard>
+
+        <StepCard
+          title="SSH & GitHub authentication"
+          explanation="SSH uses asymmetric encryption. Your laptop keeps a private key, shares a public key with GitHub, and proves its identity without ever sending the private key across the network."
+        >
+          <SshGithubLesson />
         </StepCard>
       </LessonPage>
     </div>

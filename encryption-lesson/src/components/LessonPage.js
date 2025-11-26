@@ -7,6 +7,7 @@ const steps = [
   'Asymmetric encryption (RSA)',
   'Hybrid (HTTPS style)',
   'Real-world examples (Wi-Fi, vaults)',
+  'SSH & GitHub keys',
 ];
 
 const LessonPage = ({ children }) => {
