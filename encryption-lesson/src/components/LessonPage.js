@@ -1,17 +1,11 @@
 import React, { useState } from 'react';
 
-// To add, remove, or edit steps, modify the 'steps' array below.
-const steps = [
-  'Why we need encryption',
-  'Symmetric encryption (AES)',
-  'Asymmetric encryption (RSA)',
-  'Hybrid (HTTPS style)',
-  'Real-world examples (Wi-Fi, vaults)',
-  'SSH & GitHub keys',
-];
-
+// This component is now data-driven. The steps are derived from the children's props.
 const LessonPage = ({ children }) => {
   const [activeStep, setActiveStep] = useState(0);
+
+  // Dynamically create the steps from the title prop of each child component.
+  const steps = React.Children.map(children, child => child.props.title);
 
   return (
     <div style={{ display: 'flex' }}>
